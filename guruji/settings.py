@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,8 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-auavbcagurlvb&-&k(qe5q10$$y(543i&&--zi&iu0ktlys$8y"
-
+SECRET_KEY =  "django-insecure-auavbcagurlvb&-&k(qe5q10$$y(543i&&--zi&iu0ktlys$8y"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -83,15 +84,18 @@ WSGI_APPLICATION = "guruji.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'guruji',
-        'USER': 'postgres',
-        'PASSWORD': '7014soumalya',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'guruji',
+#         'USER': 'postgres',
+#         'PASSWORD': '7014soumalya',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+DATABASES={
+    'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
@@ -132,7 +136,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / "static"
 
 MEDIA_ROOT = BASE_DIR / 'media'
-MEDIA_URL = '/media/'
+MEDIA_URL = 'guruji/media/'
 
 
 # Default primary key field type
