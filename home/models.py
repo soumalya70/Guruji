@@ -20,7 +20,7 @@ class Our_Services_Cards(models.Model):
     title=models.CharField(max_length=150)
     description=models.TextField()
     def __str__(self):
-        return self.nakshatra
+        return self.title
 class Todays_Updates(models.Model):
     image=models.ImageField(upload_to='todays_updates/')
     nakshatra=models.CharField(max_length=150)
