@@ -6,7 +6,7 @@ class BannerImageAdmin(admin.ModelAdmin):
 
 admin.site.register(BannerImage, BannerImageAdmin)
 class AboutAdmin(admin.ModelAdmin):
-    list_display = ('image', 'description')
+    list_display = ('description','image' )
 
 admin.site.register(AboutGuruji, AboutAdmin)
 class Our_Services_CardsAdmin(admin.ModelAdmin):
