@@ -10,7 +10,7 @@ class AboutAdmin(admin.ModelAdmin):
 
 admin.site.register(AboutGuruji, AboutAdmin)
 class Our_Services_CardsAdmin(admin.ModelAdmin):
-    list_display = ('image', 'title','description')
+    list_display = ('title','image','description')
 
 admin.site.register(Our_Services_Cards, Our_Services_CardsAdmin)
 
