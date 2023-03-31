@@ -20,32 +20,32 @@ class ResolveProblemsSerializer(serializers.ModelSerializer):
     
 class GurujiWordsSerializer(serializers.ModelSerializer):
     class Meta:
-        models=GurujiWords
+        model=GurujiWords
         fields= '__all__'
 class Todays_UpdateSerializer(serializers.ModelSerializer):
     class Meta:
-        models=Todays_Updates
+        model=Todays_Updates
         fields='__all__'
 class Aj_ka_RashifalSerializer(serializers.ModelSerializer):
     class Meta:
-        models=Aaj_ka_Rashifal
+        model=Aaj_ka_Rashifal
         fields='__all__'
 class FestivalSerializer(serializers.ModelSerializer):
     class Meta:
-        models=Festival
+        model=Festival
         fields='__all__'
 
 class TestimonialSerializer(serializers.ModelSerializer):
     class Meta:
-        models=Testimonial
+        model=Testimonial
         fields='__all__'
     
 class Testimonial_statusSerializer(serializers.ModelSerializer):
     class Meta:
-        models=Testimonial_status
+        model=Testimonial_status
         fields='__all__'
         
 class FooterSerializer(serializers.ModelSerializer):
     class Meta:
-        models=Footer
+        model=Footer
         fields='__all__'

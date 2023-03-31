@@ -15,7 +15,7 @@ class Our_Services_CardsAdmin(admin.ModelAdmin):
 admin.site.register(Our_Services_Cards, Our_Services_CardsAdmin)
 
 class Todays_update_CardAdmin(admin.ModelAdmin):
-    list_display = ('image', 'nakshatra', 'tithi','sunrise','sunset','yoga','rashi','description','todays_update')
+    list_display = ('nakshatra','image' , 'tithi','sunrise','sunset','yoga','rashi','description','todays_update')
 admin.site.register(Todays_Updates,Todays_update_CardAdmin)
 
 class ResolveProblemAdmin(admin.ModelAdmin):

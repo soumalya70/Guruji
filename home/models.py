@@ -22,8 +22,8 @@ class Our_Services_Cards(models.Model):
     def __str__(self):
         return self.title
 class Todays_Updates(models.Model):
-    image=models.ImageField(upload_to='todays_updates/')
     nakshatra=models.CharField(max_length=150)
+    image=models.ImageField(upload_to='todays_updates/')
     tithi=models.CharField(max_length=150)
     sunrise=models.CharField(max_length=150)
     sunset=models.CharField(max_length=150)
