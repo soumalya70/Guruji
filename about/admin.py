@@ -1,42 +1,27 @@
 from django.contrib import admin
 from .models import *
 # Register your models here.
-class HeadingAdmin(admin.ModelAdmin):
-    list_display = ('image', 'heading')
+class GurujiAdmin(admin.ModelAdmin):
+    list_display = ('description', 'image', 'guruji_image', 'meet_guruji_image', 'book_image')
 
-class TopImageAdmin(admin.ModelAdmin):
-    list_display = ('description',)
-    fieldsets = (
-        (None, {
-            'fields': ('description', 'image1', 'image2', 'image3')
-        }),
-    )
+class HoroscopeAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description', 'image', 'title1', 'description1', 'title2', 'description2', 'title3', 'description3', 'title4', 'description4')
 
-class SecondTopImageAdmin(admin.ModelAdmin):
-    list_display = ('description',)
-    fieldsets = (
-        (None, {
-            'fields': ('description', 'image')
-        }),
-    )
+class KundliAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description', 'image', 'title1', 'description1', 'title2', 'description2', 'title3', 'description3', 'title4', 'description4')
 
-class MeetGurujiAdmin(admin.ModelAdmin):
-    list_display = ('title', 'date', 'time')
-    fieldsets = (
-        (None, {
-            'fields': ('title', 'date', 'time', 'image')
-        }),
-    )
+class GorcharAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description', 'image', 'title1', 'description1', 'title2', 'description2', 'title3', 'description3', 'title4', 'description4')
 
-class LatestFromGurujiAdmin(admin.ModelAdmin):
-    list_display = ('book', 'image')
+class Vedic_astrologyAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description', 'image', 'title1', 'description1', 'title2', 'description2', 'title3', 'description3', 'title4', 'description4')
 
-class AboutOtherPartAdmin(admin.ModelAdmin):
-    list_display = ('heading', 'description', 'image', 'background_image', 'types_details', 'addon_image1', 'addon_image2', 'addon_image3')
+# class AboutOtherPartAdmin(admin.ModelAdmin):
+#     list_display = ('heading', 'description', 'image', 'background_image', 'types_details', 'addon_image1', 'addon_image2', 'addon_image3')
 
-admin.site.register(Heading, HeadingAdmin)
-admin.site.register(TopImage, TopImageAdmin)
-admin.site.register(SecondTopImage, SecondTopImageAdmin)
-admin.site.register(MeetGuruji, MeetGurujiAdmin)
-admin.site.register(LatestFromGuruji, LatestFromGurujiAdmin)
-admin.site.register(AboutOtherPart, AboutOtherPartAdmin)
+admin.site.register(Guruji, GurujiAdmin)
+admin.site.register(Kundli, KundliAdmin)
+admin.site.register(Horoscope, HoroscopeAdmin)
+admin.site.register(Gorchar,GorcharAdmin)
+admin.site.register(Vedic_astrology, Vedic_astrologyAdmin)
+# admin.site.register(AboutOtherPart, AboutOtherPartAdmin)
