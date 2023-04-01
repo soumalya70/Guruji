@@ -1,5 +1,7 @@
 from django.db import models
 from django.db.models import Model
+from django.utils import timezone
+
 # Create your models here.
 
 class BannerImage(models.Model):
@@ -31,6 +33,7 @@ class Todays_Updates(models.Model):
     rashi=models.CharField(max_length=150)
     description=models.TextField()
     todays_update=models.TextField()
+    short_description=models.TextField(max_length=50, default='guruji')
     def __str__(self):
         return self.nakshatra    
 class ResolveProblem(models.Model):
@@ -47,26 +50,37 @@ class GurujiWords(models.Model):
         return self.banner_description
 
 class Aaj_ka_Rashifal(models.Model):
-    Aries=models.TextField()
-    Taurus=models.TextField()
-    Gemini=models.TextField()
-    Cancer=models.TextField()
-    Leo=models.TextField()
-    Virgo=models.TextField()
-    Libra=models.TextField()
-    Scorpio=models.TextField()
-    Sagittarius=models.TextField()
-    Capricorn=models.TextField()
-    Aquarius=models.TextField()
-    Pisces=models.TextField()
+    Aries=models.TextField(blank=False)
+    Taurus=models.TextField(blank=False)
+    Gemini=models.TextField(blank=False)
+    Cancer=models.TextField(blank=False)
+    Leo=models.TextField(blank=False)
+    Virgo=models.TextField(blank=False)
+    Libra=models.TextField(blank=False)
+    Scorpio=models.TextField(blank=False)
+    Sagittarius=models.TextField(blank=False)
+    Capricorn=models.TextField(blank=False)
+    Aquarius=models.TextField(blank=False)
+    Pisces=models.TextField(blank=False)
     def __str__(self):
         return self.Aries
     
 class Festival(models.Model):
-    date = models.DateField()
-    description = models.TextField()
+    # date = models.DateField()
+    january = models.TextField(blank=False, default='february')
+    february = models.TextField(blank=False, default='february')
+    march = models.TextField(blank=False, default='february')
+    april = models.TextField(blank=False, default='february')
+    may = models.TextField(blank=False, default='february')
+    june = models.TextField(blank=False, default='february')
+    july = models.TextField(blank=False, default='february')
+    august = models.TextField(blank=False, default='february')
+    september = models.TextField(blank=False, default='february')
+    october = models.TextField(blank=False, default='february')
+    november = models.TextField(blank=False, default='february')
+    december = models.TextField(blank=False, default='february')
     def __str__(self):
-        return self.description
+        return self.january
 
 class Testimonial(models.Model):
     image = models.ImageField(upload_to='testimonial/')

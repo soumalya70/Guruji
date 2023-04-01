@@ -15,7 +15,7 @@ class Our_Services_CardsAdmin(admin.ModelAdmin):
 admin.site.register(Our_Services_Cards, Our_Services_CardsAdmin)
 
 class Todays_update_CardAdmin(admin.ModelAdmin):
-    list_display = ('nakshatra','image' , 'tithi','sunrise','sunset','yoga','rashi','description','todays_update')
+    list_display = ('nakshatra','image' , 'tithi','sunrise','sunset','yoga','rashi','description','todays_update','short_description')
 admin.site.register(Todays_Updates,Todays_update_CardAdmin)
 
 class ResolveProblemAdmin(admin.ModelAdmin):
@@ -34,7 +34,7 @@ class Aaj_ka_RasidalAdmin(admin.ModelAdmin):
 admin.site.register(Aaj_ka_Rashifal, Aaj_ka_RasidalAdmin)
 
 class FestivalAdmin(admin.ModelAdmin):
-    list_display = ('date', 'description')
+    list_display = ('january','february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december')
 
 admin.site.register(Festival, FestivalAdmin)
 
