@@ -7,9 +7,9 @@ class Card(models.Model):
     description=models.TextField(max_length=255)
     def __str__(self):
         return self.heading
-class Description(models.Model):
-    text=models.CharField(max_length=200)
-    image=models.ImageField(upload_to='images/')
-    description=models.TextField(max_length=255)
-    def __str__(self):
-        return self.text
+# class Description(models.Model):
+#     text=models.CharField(max_length=200)
+#     image=models.ImageField(upload_to='images/')
+#     description=models.TextField(max_length=255)
+#     def __str__(self):
+#         return self.text

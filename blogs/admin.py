@@ -1,15 +1,22 @@
 from django.contrib import admin
-from .models import Blog, Card
+from .models import *
 
+class AstrologyAdmin(admin.ModelAdmin):
+    list_display=('title', 'description')
+class NatureAdmin(admin.ModelAdmin):
+    list_display=('title', 'description')
+class PoliticalAdmin(admin.ModelAdmin):
+    list_display=('title', 'description')
+class SportsAdmin(admin.ModelAdmin):
+    list_display=('title', 'description')
+class SocialAdmin(admin.ModelAdmin):
+    list_display=('title', 'description')
+class ReligiousAdmin(admin.ModelAdmin):
+    list_display=('title', 'description')
 
-class CardAdmin(admin.ModelAdmin):
-    list_display=('image', 'description')
-
-
-
-class BlogAdmin(admin.ModelAdmin):
-    list_display=('image', 'heading', 'description', 'detail_description', 'background_image', 'youtube_link')
-
-
-admin.site.register(Blog, BlogAdmin)
-admin.site.register(Card,CardAdmin)
+admin.site.register(Astrology, AstrologyAdmin)
+admin.site.register(Nature,NatureAdmin)
+admin.site.register(Political,PoliticalAdmin)
+admin.site.register(Sports,SportsAdmin)
+admin.site.register(Social,SocialAdmin)
+admin.site.register(Religious,ReligiousAdmin)

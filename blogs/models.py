@@ -1,20 +1,42 @@
 from django.db import models
 
-class Card(models.Model):
-    image = models.ImageField(upload_to='blog_cards/')
+class Astrology(models.Model):
+    title= models.CharField(max_length=100)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+
+class Nature(models.Model):
+    title= models.CharField(max_length=100)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title
+class Political(models.Model):
+    title= models.CharField(max_length=100)
+    description = models.TextField()
+    def __str__(self):
+        return self.title
+    
+class Sports(models.Model):
+    title= models.CharField(max_length=100)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+class Social(models.Model):
+    title= models.CharField(max_length=100)
+    description = models.TextField()
+    
+    def __str__(self):
+        return self.title
+    
+class Religious(models.Model):
+    title= models.CharField(max_length=100)
     description = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.description
-
-
-class Blog(models.Model):
-    image = models.ImageField(upload_to='blog_images/')
-    heading = models.CharField(max_length=255)
-    description = models.TextField()
-    detail_description = models.TextField()
-    background_image = models.ImageField(upload_to='blog_background_images/')
-    youtube_link = models.URLField(blank=True, null=True)
-
-    def __str__(self):
-        return self.heading
+        return self.title
