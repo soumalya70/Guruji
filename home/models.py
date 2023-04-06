@@ -47,7 +47,7 @@ class GurujiWords(models.Model):
     heading = models.CharField(max_length=255)
     description = models.TextField()
     def __str__(self):
-        return self.banner_description
+        return self.description
 
 class Aaj_ka_Rashifal(models.Model):
     Aries=models.TextField(blank=False)
