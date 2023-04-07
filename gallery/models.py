@@ -4,9 +4,10 @@ from django.db import models
 class Add_Photo(models.Model):
     photo=models.ImageField(upload_to='photos/')
     def __str__(self):
-        return self.photo
+        return self.photo.name
 class Add_video(models.Model):
     video_template=models.ImageField(upload_to='videos/')
     video_link=models.URLField()
     def __str__(self):
-        return self.video
+        return self.video_template.name
+    
