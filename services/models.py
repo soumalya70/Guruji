@@ -5,6 +5,7 @@ class Card(models.Model):
     image=models.ImageField(upload_to='images/')
     heading=models.CharField(max_length=200)
     description=models.TextField(max_length=255)
+    long_description=models.TextField(max_length=400,default='type here')
     def __str__(self):
         return self.heading
 # class Description(models.Model):

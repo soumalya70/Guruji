@@ -3,7 +3,7 @@ from .models import *
 
 # Register your models here.
 class CardAdmin(admin.ModelAdmin):
-    list_display = ('image', 'heading', 'description')
+    list_display = ('image', 'heading', 'description','long_description')
 admin.site.register(Card,CardAdmin)
 
 # class DescriptionAdmin(admin.ModelAdmin):
