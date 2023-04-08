@@ -4,10 +4,10 @@ from .models import *
 from .serializers import *
 # Create your views here.
 
-class Add_photoAPIView(generics.ListCreateAPIView):
+class Add_photoAPIView(generics.ListAPIView):
     queryset = Add_Photo.objects.all()
     serializer_class = Add_photoSerializer
 
-class Add_videoAPIView(generics.ListCreateAPIView):
+class Add_videoAPIView(generics.ListAPIView):
     queryset=Add_video.objects.all()
     serializer_class=Add_videoSerializer

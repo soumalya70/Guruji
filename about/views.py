@@ -4,23 +4,23 @@ from .models import *
 from .serializers import *
 
 # Create your views here.
-class GurujiAPIView(generics.ListCreateAPIView):
+class GurujiAPIView(generics.ListAPIView):
     queryset = Guruji.objects.all().order_by('-id')[:1]
     serializer_class = GurujiSerializer
 
-class HoroscopeAPIView(generics.ListCreateAPIView):
+class HoroscopeAPIView(generics.ListAPIView):
     queryset=Horoscope.objects.all().order_by('-id')[:1]
     serializer_class=HoroscopeSerializer
 
-class KundliAPIView(generics.ListCreateAPIView):
+class KundliAPIView(generics.ListAPIView):
     queryset=Horoscope.objects.all().order_by('-id')[:1]
     serializers_class=KundliSerializer
     
-class GorcharAPIView(generics.ListCreateAPIView):
+class GorcharAPIView(generics.ListAPIView):
     queryset=Gorchar.objects.all().order_by('-id')[:1]
     serializers_class=GorchaSerializer
     
-class VedicAPIView(generics.ListCreateAPIView):
+class VedicAPIView(generics.ListAPIView):
     queryset=Vedic_astrology.objects.all().order_by('-id')[:1]
     serializer_class=VedicSerializer
 

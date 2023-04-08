@@ -4,7 +4,7 @@ from .models import *
 from .serializers import *
 
 # Create your views here.
-class ServiceCardAPIView(generics.ListCreateAPIView):
+class ServiceCardAPIView(generics.ListAPIView):
     queryset = Card.objects.all().order_by('-id')[:6]
     serializer_class = ServiceSerializer
     
