@@ -4,14 +4,14 @@ from django.db import models
 from django.db import models
 
 class Guruji(models.Model):
-    description = models.TextField()
+    # description = models.TextField()
     image = models.ImageField(upload_to='about/')
     image2= models.ImageField(upload_to='about/')
     image3= models.ImageField(upload_to='about/')
     image4= models.ImageField(upload_to='about/')
     image5= models.ImageField(upload_to='about/')
     image6= models.ImageField(upload_to='about/')
-    guruji_image = models.ImageField(upload_to='guruji_images/')
+    # guruji_image = models.ImageField(upload_to='guruji_images/')
     meet_guruji_image = models.ImageField(upload_to='meet_guruji/')
     meet_guruji_image2 = models.ImageField(upload_to='meet_guruji/')
     meet_guruji_image3 = models.ImageField(upload_to='meet_guruji/')
@@ -22,7 +22,7 @@ class Guruji(models.Model):
     book_image3 = models.ImageField(upload_to='book_images/')
     book3_url=models.URLField()
     def __str__(self):
-        return self.description
+        return self.image.name
     
 class Horoscope(models.Model):
     title=models.CharField(max_length=100)
