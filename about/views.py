@@ -13,7 +13,7 @@ class HoroscopeAPIView(generics.ListAPIView):
     serializer_class=HoroscopeSerializer
 
 class KundliAPIView(generics.ListAPIView):
-    queryset=Horoscope.objects.all().order_by('-id')[:1]
+    queryset=Kundli.objects.all().order_by('-id')[:1]
     serializer_class=KundliSerializer
     
 class GorcharAPIView(generics.ListAPIView):
