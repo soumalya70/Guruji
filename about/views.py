@@ -14,11 +14,11 @@ class HoroscopeAPIView(generics.ListAPIView):
 
 class KundliAPIView(generics.ListAPIView):
     queryset=Horoscope.objects.all().order_by('-id')[:1]
-    serializers_class=KundliSerializer
+    serializer_class=KundliSerializer
     
 class GorcharAPIView(generics.ListAPIView):
     queryset=Gorchar.objects.all().order_by('-id')[:1]
-    serializers_class=GorchaSerializer
+    serializer_class=GorchaSerializer
     
 class VedicAPIView(generics.ListAPIView):
     queryset=Vedic_astrology.objects.all().order_by('-id')[:1]
